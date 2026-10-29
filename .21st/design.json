@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "project": {
+    "name": "codeshor-wedding-showcase",
+    "productType": "Wedding website portfolio and lead generation",
+    "stack": [
+      "HTML",
+      "CSS",
+      "Vanilla JavaScript"
+    ]
+  },
+  "sources": {
+    "tokens": [],
+    "components": [],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "ink": "#362c2a",
+      "gold": "#ad8b52",
+      "wine": "#691d32",
+      "cream": "#fbf8f1"
+    },
+    "typography": {
+      "body": "DM Sans",
+      "display": "Italiana",
+      "accent": "Georgia italic"
+    },
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    "Ivory and burgundy editorial direction with real screenshots of all three live designs.",
+    "Buildless static site; no edits to source wedding projects.",
+    "Demo contact guard until the real business WhatsApp number is configured."
+  ],
+  "evidence": [],
+  "generatedAt": "2026-10-29T03:54:55.99Z"
+}
