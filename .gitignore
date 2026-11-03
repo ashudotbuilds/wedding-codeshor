@@ -1,5 +1,32 @@
+# Dependencies and generated builds
 node_modules/
 dist/
-*.zip
-codeshor-reference.html
+coverage/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local agent, hosting and deployment state
+.21st/
+.openai/
+.vercel/
 qa/
+tmp/
+
+# Logs and temporary files
+*.log
+*.zip
+*.tar.gz
+*.tmp
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

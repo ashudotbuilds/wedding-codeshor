@@ -1,4 +1,4 @@
-# Codeshor Wedding Showcase
+# wedding-codeshor
 
 A simple one-page collection built with Vite, React and Tailwind CSS. Showcases Bandhan, Milan and Vivah with real screenshots, live demos and a design-specific WhatsApp enquiry flow.
 
@@ -23,7 +23,7 @@ npm run preview # Preview the production build
 ```text
 src/
   assets/
-    brand/           # Original Codeshor logo supplied by the user
+    brand/           # Final brown Codeshor Weddings logo
     previews/        # Screenshots of the three live wedding designs
   components/        # Header, hero, design collection, features and contact
   config/contact.js  # Business contact details and demo mode
@@ -44,6 +44,6 @@ No backend, UI framework or animation library. Feature availability differs by d
 
 ## Deployment
 
-For Vercel, select Vite, use `npm run build` and output directory `dist`. Existing Sites hosting also serves `dist/`. Build output is generated, not maintained as source.
+For Vercel, select Vite, use `npm run build` and output directory `dist`. Build output is generated, not maintained as source. Run `npm ci` for a reproducible installation from the committed lockfile.
 
-All changes are confined to this showcase. The Bandhan and Milan codebases are untouched.
+The repository contains only this showcase. Live demo links point to the separate Bandhan, Milan and Vivah websites.

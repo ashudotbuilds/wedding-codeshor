@@ -2,7 +2,7 @@ import ArrowIcon from './ArrowIcon';
 
 export default function DesignCard({ design, onChoose }) {
   return (
-    <article className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-line bg-white">
+    <article className="wedding-card flex min-w-0 flex-col overflow-hidden border border-line">
       <a href={design.url} target="_blank" rel="noopener noreferrer" className="group relative block border-b border-line bg-surface p-3" aria-label={`View ${design.name} live demo (opens in a new tab)`}>
         <img src={design.preview} alt={design.previewAlt} width="1280" height="720" className="aspect-[16/10] w-full rounded-sm object-cover object-top" />
         <span className="absolute right-5 bottom-5 flex size-9 items-center justify-center rounded-full border border-line bg-white text-ink transition-colors group-hover:bg-action group-hover:text-white"><ArrowIcon /></span>

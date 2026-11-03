@@ -1,29 +1,51 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: 'Lato', Arial, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --color-brand: #091433;
-  --color-action: #2356db;
-  --color-action-hover: #1642b7;
-  --color-ink: #182033;
-  --color-muted: #586174;
-  --color-line: #dce1e9;
-  --color-surface: #f5f7fa;
+  --color-action: #752b36;
+  --color-action-hover: #57202a;
+  --color-ink: #382a26;
+  --color-muted: #75645b;
+  --color-line: #ddceb7;
+  --color-surface: #f4ecdd;
+  --color-gold: #a48146;
 }
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-  body { margin: 0; background: white; color: var(--color-ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+  body { margin: 0; background: #fffbf3; color: var(--color-ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+  h1, h2 { font-family: var(--font-serif); }
   button, a, select { -webkit-tap-highlight-color: transparent; }
   button { cursor: pointer; }
-  :focus-visible { outline: 3px solid #4b8bfa; outline-offset: 5px; }
-  ::selection { background: #dbe8ff; color: #152b57; }
+  :focus-visible { outline: 3px solid #b79457; outline-offset: 5px; }
+  ::selection { background: #eddbbb; color: #57202a; }
   dialog::backdrop { background: rgb(11 21 53 / 55%); }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 }
 
 @layer components {
   .container-page { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8; }
-  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-action px-5 py-3 text-base font-semibold text-white transition-colors hover:bg-action-hover; }
-  .button-secondary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-line bg-white px-5 py-3 text-base font-semibold text-ink transition-colors hover:border-slate-400 hover:bg-slate-50; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-action bg-action px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-action-hover; }
+  .button-secondary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-line bg-transparent px-6 py-3 text-base font-semibold text-action transition-colors hover:border-gold hover:bg-surface; }
 }
+
+.wedding-hero { position: relative; border-bottom: 1px solid var(--color-line); background: #faf3e5; }
+.wedding-hero::before, .wedding-hero::after { content: ''; position: absolute; top: 22px; bottom: 22px; width: 22px; border-block: 1px solid #c8ab78; pointer-events: none; }
+.wedding-hero::before { left: 22px; border-left: 1px solid #c8ab78; }
+.wedding-hero::after { right: 22px; border-right: 1px solid #c8ab78; }
+.wedding-ornament { display: flex; align-items: center; justify-content: center; gap: 18px; color: var(--color-gold); }
+.wedding-ornament::before, .wedding-ornament::after { content: ''; width: 70px; height: 1px; background: #c8ab78; }
+.wedding-card { background: #fffdf8; border-color: #ddceb7; border-radius: 3px; box-shadow: 0 5px 20px #68482b06; }
+.wedding-card > a { background: #efe5d3; padding: 16px; }
+.wedding-card h3 { font-family: var(--font-serif); font-size: 34px; font-weight: 600; color: var(--color-action); }
+#features h3 { color: var(--color-action); }
+#features > div > div > div { border-left: 1px solid #c8ab78; padding-left: 20px; }
+#contact > div { padding: 38px; background: #752b36; color: #fff8ec; border: 4px double #b48e5a; }
+#contact h2 { font-size: 40px; font-weight: 600; }
+#contact p { color: #ead8ce; }
+#contact select { color: var(--color-ink); background: #fffbf3; border-color: #bda47c; border-radius: 2px; }
+#contact .button-primary { background: #f0dfbd; color: #57202a; border-color: #f0dfbd; }
+#contact .button-primary:hover { background: #e6cfa6; }
+@media(max-width:640px) { .wedding-hero::before { left: 10px; } .wedding-hero::after { right: 10px; } .wedding-hero::before,.wedding-hero::after { width: 12px; } #contact > div { padding: 25px 20px; } #contact h2 { font-size: 34px; } }
