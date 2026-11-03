@@ -4,18 +4,18 @@
   --font-sans: 'Lato', Arial, sans-serif;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --color-brand: #091433;
-  --color-action: #752b36;
-  --color-action-hover: #57202a;
+  --color-action: #641d2b;
+  --color-action-hover: #4b1420;
   --color-ink: #382a26;
   --color-muted: #75645b;
   --color-line: #ddceb7;
   --color-surface: #f4ecdd;
-  --color-gold: #a48146;
+  --color-gold: #b4935a;
 }
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-  body { margin: 0; background: #fffbf3; color: var(--color-ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+  body { margin: 0; background: #fff9ef; color: var(--color-ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
   h1, h2 { font-family: var(--font-serif); }
   button, a, select { -webkit-tap-highlight-color: transparent; }
   button { cursor: pointer; }
@@ -31,7 +31,14 @@
   .button-secondary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-line bg-transparent px-6 py-3 text-base font-semibold text-action transition-colors hover:border-gold hover:bg-surface; }
 }
 
-.wedding-hero { position: relative; border-bottom: 1px solid var(--color-line); background: #faf3e5; }
+.wedding-hero { position: relative; border-bottom: 1px solid var(--color-gold); background: #641d2b; color: #fff9ef; }
+.wedding-hero h1 { color: #fff9ef; }
+.wedding-hero p.text-action { color: #dfc492; }
+.wedding-hero p.text-muted { color: #f0ddd4; }
+.wedding-hero .button-primary { background: #ead6b0; color: #4b1420; border-color: #ead6b0; }
+.wedding-hero .button-primary:hover { background: #ddc18e; }
+.wedding-hero .button-secondary { color: #fff9ef; border-color: #b4935a; }
+.wedding-hero .button-secondary:hover { background: #7b3040; }
 .wedding-hero::before, .wedding-hero::after { content: ''; position: absolute; top: 22px; bottom: 22px; width: 22px; border-block: 1px solid #c8ab78; pointer-events: none; }
 .wedding-hero::before { left: 22px; border-left: 1px solid #c8ab78; }
 .wedding-hero::after { right: 22px; border-right: 1px solid #c8ab78; }
@@ -42,7 +49,8 @@
 .wedding-card h3 { font-family: var(--font-serif); font-size: 34px; font-weight: 600; color: var(--color-action); }
 #features h3 { color: var(--color-action); }
 #features > div > div > div { border-left: 1px solid #c8ab78; padding-left: 20px; }
-#contact > div { padding: 38px; background: #752b36; color: #fff8ec; border: 4px double #b48e5a; }
+#contact > div { padding: 38px; background: #641d2b; color: #fff9ef; border: 4px double #b4935a; }
+#contact .contact-email { color: #efd9b1; }
 #contact h2 { font-size: 40px; font-weight: 600; }
 #contact p { color: #ead8ce; }
 #contact select { color: var(--color-ink); background: #fffbf3; border-color: #bda47c; border-radius: 2px; }

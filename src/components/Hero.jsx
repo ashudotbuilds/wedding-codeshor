@@ -1,4 +1,6 @@
 import ArrowIcon from './ArrowIcon';
+import { contactConfig } from '../config/contact';
+import { createWhatsAppUrl } from '../utils/enquiry';
 
 export default function Hero() {
   return (
@@ -10,7 +12,10 @@ export default function Hero() {
           <h1 id="hero-heading" className="text-[43px] leading-[1.04] font-semibold text-action sm:text-[64px]">Rooted in tradition.<br />Made for your forever.</h1>
           <p className="mx-auto mt-5 max-w-[600px] text-lg leading-relaxed text-muted">Wedding websites that bring your story, your celebrations and your loved ones together. Choose a design. Make it yours.</p>
         </div>
-        <a href="#designs" className="button-primary whitespace-nowrap">Explore the collection <ArrowIcon direction="right" /></a>
+        <div className="flex flex-wrap justify-center gap-3">
+          <a href="#designs" className="button-primary whitespace-nowrap">Explore the collection <ArrowIcon direction="right" /></a>
+          <a href={contactConfig.isDemo ? '#contact' : createWhatsAppUrl(contactConfig.whatsappNumber, '')} target={contactConfig.isDemo ? undefined : '_blank'} rel={contactConfig.isDemo ? undefined : 'noopener noreferrer'} className="button-secondary">Chat on WhatsApp <ArrowIcon /></a>
+        </div>
       </div>
     </section>
   );

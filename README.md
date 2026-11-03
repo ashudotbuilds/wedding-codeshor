@@ -38,7 +38,9 @@ vite.config.js
 
 ## Enable real enquiries
 
-Update `src/config/contact.js`: replace the dummy WhatsApp number (international digits only), update the displayed number and set `isDemo: false`. Demo mode displays a notice with a copyable enquiry. Real mode opens WhatsApp with the selected design in the message.
+Copy `.env.example` to `.env.local` and set `VITE_WHATSAPP_NUMBER` (international digits only) and `VITE_CONTACT_EMAIL`. Restart Vite after changing environment variables. WhatsApp opens directly with the selected design in the message; the email link opens a prefilled email. Without a configured number, the contact preview is shown instead.
+
+The `.env.local` file is ignored by Git. These `VITE_` values are public business contact information included in the browser bundle; never put secrets in them. Set the same environment variables in your hosting provider before building for production.
 
 No backend, UI framework or animation library. Feature availability differs by design; support hours and turnaround guarantees need confirmation before being advertised.
 
