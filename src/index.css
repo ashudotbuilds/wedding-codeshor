@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --color-brand: #091433;
+  --color-action: #2356db;
+  --color-action-hover: #1642b7;
+  --color-ink: #182033;
+  --color-muted: #586174;
+  --color-line: #dce1e9;
+  --color-surface: #f5f7fa;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { margin: 0; background: white; color: var(--color-ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+  button, a, select { -webkit-tap-highlight-color: transparent; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 3px solid #4b8bfa; outline-offset: 5px; }
+  ::selection { background: #dbe8ff; color: #152b57; }
+  dialog::backdrop { background: rgb(11 21 53 / 55%); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-action px-5 py-3 text-base font-semibold text-white transition-colors hover:bg-action-hover; }
+  .button-secondary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-line bg-white px-5 py-3 text-base font-semibold text-ink transition-colors hover:border-slate-400 hover:bg-slate-50; }
+}

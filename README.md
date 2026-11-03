@@ -1,22 +1,49 @@
 # Codeshor Wedding Showcase
 
-A responsive single-page landing page for the Bandhan, Milan and Vivah designs. Uses actual screenshots of the supplied live sites. All new code lives in this project; the Bandhan and Milan repositories are untouched.
+A simple one-page collection built with Vite, React and Tailwind CSS. Showcases Bandhan, Milan and Vivah with real screenshots, live demos and a design-specific WhatsApp enquiry flow.
 
-## Run
+## Development
 
-Run `npm run dev`, then open http://127.0.0.1:4185. No installation or build is required. `npm run check` checks JavaScript syntax. Deploy `dist/` as a static website. On Vercel, use Other as the framework, no build command and `dist` as the output directory.
+Use Node.js 22.12+ (Node.js 24 recommended).
 
-## Contact configuration
+```sh
+npm install
+npm run dev
+```
 
-Edit `dist/config.js`: set the real WhatsApp number in international digits (no plus sign), set `displayNumber`, and set `isDemoContact: false`. Until then, the clearly marked demo contact opens a preview notice with a copyable enquiry, rather than messaging a made-up number. The selected design is included in each enquiry.
+Open the URL printed by Vite (default http://127.0.0.1:4185).
 
-Support hours and turnaround guarantees are deliberately not promised until confirmed. Feature availability varies by design. Enquiries go through WhatsApp; no form submissions or guest information are stored by this site.
+```sh
+npm run build   # Production files in dist/
+npm run preview # Preview the production build
+```
 
-## Files
+## Structure
 
-- `dist/index.html`: page content, links and accessible dialog.
-- `dist/styles.css`: responsive ivory and burgundy visual system.
-- `dist/app.js`: design selection, WhatsApp enquiry and demo contact handling.
-- `dist/assets/`: captured site previews and favicon.
-- `scripts/serve.mjs`: dependency-free local preview server.
+```text
+src/
+  assets/
+    brand/           # Original Codeshor logo supplied by the user
+    previews/        # Screenshots of the three live wedding designs
+  components/        # Header, hero, design collection, features and contact
+  config/contact.js  # Business contact details and demo mode
+  data/              # Design and feature content
+  utils/enquiry.js   # Enquiry text and WhatsApp URL helpers
+  App.jsx            # Page composition and shared selection state
+  main.jsx           # React entry point
+  index.css          # Tailwind import, theme and shared button styles
+index.html
+vite.config.js
+```
 
+## Enable real enquiries
+
+Update `src/config/contact.js`: replace the dummy WhatsApp number (international digits only), update the displayed number and set `isDemo: false`. Demo mode displays a notice with a copyable enquiry. Real mode opens WhatsApp with the selected design in the message.
+
+No backend, UI framework or animation library. Feature availability differs by design; support hours and turnaround guarantees need confirmation before being advertised.
+
+## Deployment
+
+For Vercel, select Vite, use `npm run build` and output directory `dist`. Existing Sites hosting also serves `dist/`. Build output is generated, not maintained as source.
+
+All changes are confined to this showcase. The Bandhan and Milan codebases are untouched.

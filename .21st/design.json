@@ -4,9 +4,9 @@
     "name": "codeshor-wedding-showcase",
     "productType": "Wedding website portfolio and lead generation",
     "stack": [
-      "HTML",
-      "CSS",
-      "Vanilla JavaScript"
+      "Vite",
+      "React",
+      "Tailwind CSS"
     ]
   },
   "sources": {
@@ -18,15 +18,16 @@
   "design": {
     "colorMode": "light",
     "colors": {
-      "ink": "#362c2a",
-      "gold": "#ad8b52",
-      "wine": "#691d32",
-      "cream": "#fbf8f1"
+      "ink": "#182033",
+      "action": "#2356db",
+      "surface": "#f5f7fa",
+      "brand": "#091433"
     },
     "typography": {
-      "body": "DM Sans",
-      "display": "Italiana",
-      "accent": "Georgia italic"
+      "introSize": "18px",
+      "body": "Arial, Helvetica, sans-serif",
+      "headingSize": "36px mobile / 48px desktop",
+      "bodySize": "16px"
     },
     "spacing": {},
     "radius": {},
@@ -44,9 +45,10 @@
     "avoid": []
   },
   "decisions": [
-    "Ivory and burgundy editorial direction with real screenshots of all three live designs.",
-    "Buildless static site; no edits to source wedding projects.",
-    "Demo contact guard until the real business WhatsApp number is configured."
+    "User requested a simple one-page site with larger text and their supplied Codeshor logo.",
+    "Vite + React + Tailwind CSS; components, data, config and assets live under src/.",
+    "White page with a navy logo header and blue actions; no decorative hero image, ornamental type or effects.",
+    "Reuse actual design screenshots and preserve dummy contact mode."
   ],
   "evidence": [],
   "generatedAt": "2026-10-29T03:54:55.99Z"
